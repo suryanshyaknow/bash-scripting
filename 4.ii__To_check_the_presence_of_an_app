@@ -1,0 +1,25 @@
+#! /bin/bash
+
+
+# An example to check the existence of an application, here `htop`
+app=/usr/bin/htop
+if [ -f $app ]
+then
+    echo "$app is available, let's run it..."
+else
+    echo "$app ain't available, installing it,,,"
+    sudo apt update && sudo apt install -y htop
+fi
+$app
+
+
+# An example to check if `python` is there on our system
+$cmd=python
+if command -v $cmd  # NOTE: Brackets aren't necessary as we ain't using any test commands.
+then
+    echo "$cmd is available, let's run it..."
+else
+    echo "$cmd ain't available, installing it..."
+    sudo apt update && sudo apt install -y python
+fi
+$cmd

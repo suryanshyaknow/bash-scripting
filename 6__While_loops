@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+# An example implementing `while` loop
+myvar=1999
+while [ $myvar -le 2011 ]
+do
+	if [ $myvar -eq 2004 ]; then
+		echo "Divyansh has been born!"
+		myvar=$(( $myvar + 1))
+		continue
+	elif [ $myvar -eq 2011 ]; then
+		echo "My lil sis has been born!"
+		break
+	fi
+
+	echo $myvar
+	myvar=$(( $myvar + 1 ))
+	sleep 0.5
+done
+
+
+# An example to test the existence of a file...
+while [ -f ~/testfile ]
+do
+	echo "As of $(date), the test file exists."
+	sleep 5
+done
+echo "As of $(date), the file no longer exists. Exiting..."
+
+# NOTE: We are tryna create a 'break' condition for the above loop in realtime.

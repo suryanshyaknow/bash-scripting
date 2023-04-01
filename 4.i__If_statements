@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+# Example 1
+birth_year=2000
+if [ $birth_year -eq 1999 ]
+then
+    echo "Your birth year indeed is 1999."
+else
+    echo "The condition is false."
+fi
+
+
+# Example 2
+name="Spidey"
+if [ ! $name -eq "Spidey" ]  # Exactly same as writing `if [ $name -ne "Spidey" ]`
+then
+    echo "We've got your name wrong!"
+else
+    echo "We've got your name RIGHT!"
+fi
+
+
+# An example to check the presence of a file in the system
+if [ -f ./myfile.txt ]
+then
+    echo "The file does exist!"
+else
+    echo "The file doesn't exist!"
+fi

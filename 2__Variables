@@ -1,0 +1,26 @@
+#!/bin/sh
+
+
+# i. Variables Overview
+
+myname="Spidey"
+myage="23"
+
+echo "Hi, my name is $myname."
+echo 'Hi my name is $myname.'  # Can't reference variables within the single quotes
+echo "I'm $myage years old."
+
+
+# ii. Assigning inbuilt commands to the variables
+
+now=$(date)  # command substitution
+
+echo "The system's time and date is: "
+date
+echo $date  # echoed an empty line into the terminal
+echo $now
+
+
+# iii. Inbuilt variables
+
+echo "Yo, my name (inbuilt) is $USER."  # didn't work in GitBash

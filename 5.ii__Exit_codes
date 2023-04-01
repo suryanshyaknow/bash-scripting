@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+dir=/notexist
+
+if [ -d $dir ]
+then
+	echo "The exit code for this script is $?"
+	echo "The directory $dir exists!"
+else
+	echo "The exit code for this script is $?"	
+	echo "The directory $dir doesn't exist!"
+fi
+echo "The exit code for this script is $?"
+
+# NOTE: Remember exit code shows the status of the most recent run cmd.
+
+
+# We can even enforce the values to the exit code via the "Exit" command. Let's see how...
+echo ""
+echo "I'm setting exit code for this very statement as 1999. Confirm if you must!"
+exit 199
+
+# NOTE: Do remember exit codes ranges from 0 to 255. Naturally, any code greater than 255 won't work.
